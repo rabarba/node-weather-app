@@ -1,0 +1,23 @@
+{
+  "name": "node-weather-app",
+  "version": "1.0.0",
+  "description": "# TODO List  - Build mapbox api request and get location information  - Build darksky api request and get weather information about location  - Install express.js and build server and view  - Show the information and enjoy",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rabarba/node-weather-app.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rabarba/node-weather-app/issues"
+  },
+  "homepage": "https://github.com/rabarba/node-weather-app#readme",
+  "dependencies": {
+    "request": "^2.88.0"
+  }
+}
