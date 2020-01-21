@@ -1,9 +1,18 @@
 var geocode = require('../src/services/geocode')
+var forecast = require('../src/services/forecast')
 
-geocode((error, { longitude, latitude, location }) => {
+geocode((error, response) => {
     if (error) {
         console.log(error)
     } else {
-        console.log(location, longitude, latitude)
+        console.log(response)
+    }
+})
+
+forecast((error, response) => {
+    if (error) {
+        console.log(error)
+    } else {
+        console.log(response)
     }
 })
