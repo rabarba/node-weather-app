@@ -15,21 +15,28 @@ app.get('', (req, res) => {
     res.render('index')
 })
 
-// geocode((error, response) => {
-//     if (error) {
-//         console.log(error)
-//     } else {
-//         console.log(response)
-//     }
-// })
+app.get('/weather', (req, res) => {
 
-// forecast((error, response) => {
-//     if (error) {
-//         console.log(error)
-//     } else {
-//         console.log(response)
-//     }
-// })
+    if (!req.query.address) {
+        return res.send({
+            error: 'You must provide an address...'
+        })
+    }
+
+    geocode(req.query.address, (error, geocodeResponse) => {
+        if (error) return res.send({ error })
+
+        forecast(geocodeResponse.latitude, geocodeResponse.longitude, (error, forecastResponse) => {
+            if (error) return res.send({ error })
+
+            res.send({
+                forecast: forecastResponse,
+                location: geocodeResponse.location,
+            })
+        })
+    })
+})
+
 
 app.listen(3000, () => {
     console.log('Server is up on port 3000.')

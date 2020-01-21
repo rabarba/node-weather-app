@@ -1,7 +1,7 @@
 var request = require('request')
 
-var geocode = (callback) => {
-    const url = 'https://api.mapbox.com/geocoding/v5/mapbox.places/boston.json?types=address&proximity=-122.39738575285674,37.7925147111369453&access_token=pk.eyJ1IjoicmFiYXJiYSIsImEiOiJjazVtdWx4bmEwNWpxM2Zuczh0eDFucWlyIn0.FemMMOhl5ceW-Lx96TGPFQ'
+var geocode = (address, callback) => {
+    const url = 'https://api.mapbox.com/geocoding/v5/mapbox.places/' + encodeURIComponent(address) + '.json?access_token=pk.eyJ1IjoicmFiYXJiYSIsImEiOiJjazVtdWx4bmEwNWpxM2Zuczh0eDFucWlyIn0.FemMMOhl5ceW-Lx96TGPFQ'
 
     request({ url: url, json: true }, (error, response) => {
 
