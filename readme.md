@@ -1,9 +1,25 @@
 # node-weather-app
 
-# TODO List
- - Build mapbox api request and get location information *** Done => Simple Boston location data
- - Build darksky api request and get weather information about location *** Done => Simple Los Angeles weather forecast data
- - Install express.js and build server and view *** Done => Created Index.html, style.css and app.js
- - Combine services *** Done
- - Show the information and enjoy *** Done
- - *** Will update readme.md ***
+### Getting Started
+
+The weather-app provides data from two different third-party api which are Dark Sky Api and Map Box Api.
+Firstly it calls Map Box Api for geo information of entering location.
+Then it calls Dark Sky Api with geo location information for weather information.
+
+Check this out :
+
+**https://www.mapbox.com/**
+**https://darksky.net/dev**
+
+### How to use:
+
+In the project directory, you can run;
+
+```
+node src/app.js
+```
+
+Open http://localhost:3000 to view it in the browser.
+
+
+
